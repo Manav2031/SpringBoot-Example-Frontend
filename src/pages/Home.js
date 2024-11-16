@@ -12,12 +12,12 @@ const Home = () => {
   }, []);
 
   const loadUsers = async () => {
-    const result = await axios.get("https://springboot-example-backend-production.up.railway.app/users");
+    const result = await axios.get("https://springboot-example-backend-production.up.railway.app/api/users");
     setUsers(result.data);
   };
 
   const deleteUser = async (id) => {
-    await axios.delete(`https://springboot-example-backend-production.up.railway.app/user/${id}`)
+    await axios.delete(`https://springboot-example-backend-production.up.railway.app/api/user/${id}`)
     loadUsers()
   }
 
