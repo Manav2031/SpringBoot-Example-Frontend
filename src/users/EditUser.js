@@ -26,12 +26,12 @@ const EditUser = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault()
-        await axios.put(`https://springboot-example-backend-production.up.railway.app/api/user/${id}`, user)
+        await axios.put(`http://localhost:8080/user/${id}`, user)
         navigate("/")
     }
 
     const loadUser = async () => {
-        const result = await axios.get(`https://springboot-example-backend-production.up.railway.app/api/user/${id}`)
+        const result = await axios.get(`http://localhost:8080/user/${id}`)
         setUser(result.data)
     }
 

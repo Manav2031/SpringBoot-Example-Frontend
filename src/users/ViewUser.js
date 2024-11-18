@@ -17,7 +17,7 @@ const ViewUser = () => {
     }, [])
 
     const loadUser = async () => {
-        const result = await axios.get(`https://springboot-example-backend-production.up.railway.app/api/user/${id}`)
+        const result = await axios.get(`http://localhost:8080/user/${id}`)
         setUser(result.data)
     }
 

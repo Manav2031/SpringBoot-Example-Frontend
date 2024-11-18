@@ -20,7 +20,7 @@ const AddUser = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault()
-        await axios.post("https://springboot-example-backend-production.up.railway.app/api/user", user)
+        await axios.post("http://localhost:8080/user", user)
         navigate("/")
     }
 
